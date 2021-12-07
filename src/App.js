@@ -6,6 +6,7 @@ import Reset from './components/resetpassword'
 import Forgotmsg from './components/forgotmsg';
 import Resetmsg from './components/resetmsg'
 import Emailtemp from './components/emailtemplate'
+import Landing from './components/landingpage'
 // import Validation from './components/passwordvalidation'
 
 
@@ -15,7 +16,7 @@ function App() {
      
       <BrowserRouter>
     <Routes>
-    <Route path="/" element={<Login />}/>    
+      <Route path="/" element={<Landing />}/>    
       <Route path="/login" element={<Login />}/>    
       <Route path="/signup" element={<Signup/>} />
       <Route exact path="/forgot" element={<Forgot/>} />

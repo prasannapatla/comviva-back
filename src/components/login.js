@@ -14,8 +14,6 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import $ from 'jquery';
 import { Link } from 'react-router-dom'
-
-
 import ShowyIcon from "@mui/icons-material/Visibility";
 import HideIcon from "@mui/icons-material/VisibilityOff";
 import { faEye, faTimes, faEyeSlash, faCheck, faFontAwesomeLogoFull } from "@fortawesome/free-solid-svg-icons";
