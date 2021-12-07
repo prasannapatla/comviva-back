@@ -1,0 +1,127 @@
+*{
+    box-sizing: border-box ;
+}
+.emailtemp{
+    background: #F5F5F5;
+    padding: 100px;
+
+}
+
+.emailtemp .card-title{
+    height: 34px;
+    left: 592px;
+    top: 686px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.emailtemp .card{
+    width: 540px;
+    height: 680px;
+    text-align: center;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border: none;
+}
+
+.emailtemp .card-img-top{
+    /* width: 329px;
+    height: 380px; */
+
+
+}
+
+.emailtemp .card_desc{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    text-align: center;
+    
+    color: #000000 !important;
+}
+
+.emailtemp .container p span{
+    margin-left:0px !important;
+}
+
+.emailtemp .btn-primary{
+    width: 262px;
+    height: 50px;
+    left: 697px;
+    top: 952px;
+
+    background: linear-gradient(94.64deg, #ED1C24 0%, #FAA61A 100%);
+    box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.25);
+    border-radius: 42px;
+    border: none;
+    margin-top: 20px;
+}
+
+.emailtemp .card-text{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 32px;
+    text-align: center;
+    background: -webkit-linear-gradient(94.64deg, #ED1C24 0%, #FAA61A 100%);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+   
+
+
+}
+.emailtemp .text{
+    padding:0 93px;
+}
+
+.emailtemp .top-logo{
+    width: 100px;
+    height: 20px;
+    margin-bottom: 40px;
+    margin-top: 45px;
+    text-align: left;
+    margin-left: 34px;
+    
+}
+.emailtemp .card-content{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    /* or 157% */
+
+    text-align: center;
+
+    color: #000000;
+    padding: 0px 60px;
+    margin-top: 40px;
+
+}
+
+/* footer */
+
+.footer-logo{
+    width: 100px;
+    height: 20px;
+    float: right;
+}
+.emailtemp .footer{
+    padding-top: 40px;
+    width: 540px;
+    margin: 0 auto;
+}
+
