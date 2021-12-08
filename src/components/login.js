@@ -105,7 +105,7 @@ export default function Login() {
                                 </div>
                             </form>
                             <p className="google_outlook">
-                                <div className="row">
+                                <div className="row" style={{"margin-left": "-14%"}}>
                                     <div className="col-6 social">
                                         <span className="social-text">or continue with</span>
                                     </div>
