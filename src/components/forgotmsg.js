@@ -16,7 +16,7 @@ export default function Forgotmsg() {
             <section className="forgotmsg">
 
                 <div className="container">
-                    <div className="row">
+                    <div className="row forgot-padding">
                     <div className="col-lg-6 col-sm-12 banner-img">
                             <img src={banner_img} className="login_banner_img" alt="login banner image" />
                     </div>
@@ -31,14 +31,19 @@ export default function Forgotmsg() {
                             <h4 className="welcom_text">Recovery email has been sent to your email address.</h4>
                         </div>
                     </div>
-                    <div className="row">
-                    <div className="col-6" style={{"margin-top":"12%"}}>
-                        <p className="footer_text">A PRODUCT OF</p>
-                            <img src={comviva_logo} className="footer_logo" alt="logo" />
                     </div>
-                    </div>
-                </div><br/><br/>
-            </section>
+                    </section>
+                    <section>
+                  <div className="container">
+                   <div className="row">
+                   <div className="col-6 footer_padding" style={{"margin-top":"12%"}}>
+                    <p className="footer_text">A PRODUCT OF</p>
+                    <img src={comviva_logo} className="footer_logo" alt="logo" />
+                  </div>
+                 </div>
+                </div>
+                   <br/><br/>
+                </section>
         </div>
     )
 }

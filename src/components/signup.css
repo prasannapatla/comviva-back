@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+  box-sizing: border-box ;
+  font-family: Montserrat;
+font-style: normal;
+}
 .signup .login_main {
   margin-top: 20px;
   padding-left: 6%;
@@ -262,7 +267,8 @@ input[type="text"] {
   display: inline-block;
   width: 1.6em;
   height: 1.6em;
-  padding-left: 6px;
+  line-height: 18px;
+  padding-left: 5px;
   padding-bottom: 0.3em;
   margin-right: 0.2em;
   vertical-align: bottom;
@@ -412,7 +418,9 @@ border: 1px solid #A7A9AC;
     margin-left: -4px;
 }
 
-
+.flag-dropdown ul li:nth-child(2){
+  margin-top: 12%;
+}
 
 
 /* Password  CSS */
@@ -535,7 +543,7 @@ border: 1px solid #A7A9AC;
 }
 
 .signup .Icontoggle {
-  margin-left: 385px;
+  margin-left: 369px;
   position: absolute;
   transform: translate(-25% , -236%);
 }
@@ -620,7 +628,7 @@ position: absolute;
 width: 304px;
 height: 30px;
 left: 170px;
-top: 858px;
+top: 873px;
 font-family: Montserrat;
 font-style: normal;
 font-weight: 500;
@@ -749,17 +757,8 @@ height: 353px;
 }
 
 input:focus + label {
-  /* background: -webkit-linear-gradient(94.64deg, #ED1C24 0%, #FAA61A 100%); 
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
-  /* background: -webkit-linear-gradient(94.64deg, red , yellow);
-  background: -o-linear-gradient(right, red, yellow);
-  background: -moz-linear-gradient(right, red, yellow);
-  background: linear-gradient(to right, red , yellow); 
- -webkit-background-clip: text;
- -webkit-text-fill-color: transparent; */
 
- background: -webkit-linear-gradient(94.64deg, #ed1c24 0%, #faa61a 100%);
+ background: -webkit-linear-gradient(90deg, #ed1c24 0%, #faa61a 100%);
  -webkit-background-clip: text;
  -webkit-text-fill-color: transparent;
 

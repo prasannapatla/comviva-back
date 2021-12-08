@@ -78,11 +78,15 @@ export default function Login() {
                                     <span className="Icontoggle">
                                     {show ? (
                                     <faFontAwesomeIcon icon={faEyeSlash} className="fas fa-eye-slash" id="show_hide" onClick={handleShowHide} >
-                                       &ensp; Hide Password
+                                       <span style={{ fontFamily: "Montserrat" }}>
+                                       &nbsp; Hide Password
+                                        </span>
                                     </faFontAwesomeIcon>
                                         ) : (
                                     <faFontAwesomeIcon icon={faEye} className="fas fa-eye" id="show_hide" onClick={handleShowHide} >
-                                      &ensp; Show Password
+                                      <span style={{ fontFamily: "Montserrat" }}>
+                                         &nbsp; Show Password
+                                         </span>
                                     </faFontAwesomeIcon>
                                         )}
                                     </span>
@@ -129,17 +133,19 @@ export default function Login() {
                             </p>
                         </div>
                     </div>
-                    <div className="row" style={{"margin-top":"8%"}}>
-                        <div className="col-6">
-                            <p className="footer_text">A PRODUCT OF</p>
-                            <img src={comviva_logo} className="footer_logo" alt="logo" />
-                        </div>
-                        <div className="col-6 footer_links">
-                            <a href="#">MCIP</a> | <a href="#">Privacy Policy</a> | <a href="#">Terms and conditions</a>
-                        </div>
-                    </div>
                 </div>
-            </section>  <br/>                    
+                </section>
+                <section>
+                  <div className="container">
+                   <div className="row">
+                   <div className="col-6 footer_padding" style={{"margin-top":"12%"}}>
+                    <p className="footer_text">A PRODUCT OF</p>
+                    <img src={comviva_logo} className="footer_logo" alt="logo" />
+                  </div>
+                 </div>
+                </div>
+                   <br/><br/>
+                </section>                   
         </div>
     )
 }

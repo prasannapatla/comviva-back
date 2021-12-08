@@ -181,6 +181,8 @@ $(function() {
   });
 });
 
+
+
   return (
     <div>
       <section className="resetpassword">
@@ -337,9 +339,9 @@ $(function() {
           </div>
           </div>
           </section>
+          
           <section>
             <div className="container">
-
           <div className="row">
           <div className="col-6 footer_padding" style={{"margin-top":"12%"}}>
             <p className="footer_text">A PRODUCT OF</p>

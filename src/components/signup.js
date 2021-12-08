@@ -255,7 +255,7 @@ export default function Signup() {
                     inputStyle={{color:'#000000'}}
                     containerStyle={{}}
                     buttonStyle={{}}
-                    country="in"
+                    country="al"
                     value={value}
                     onChange={setValue}
                     enableSearch="true"
@@ -294,7 +294,9 @@ export default function Signup() {
                         id="show_hide"
                         onClick={handleShowHide}
                       >
+                         <span style={{ fontFamily: "Montserrat" }}>
                          &nbsp; Hide Password
+                        </span>
                       </faFontAwesomeIcon>
                     ) : (
                       <faFontAwesomeIcon
@@ -303,7 +305,9 @@ export default function Signup() {
                         id="show_hide"
                         onClick={handleShowHide}
                       >
+                        <span style={{ fontFamily: "Montserrat" }}>
                         &nbsp; Show Password
+                        </span>
                       </faFontAwesomeIcon>
                     )}
                   </span>
