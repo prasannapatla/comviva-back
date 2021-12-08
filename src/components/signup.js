@@ -257,6 +257,8 @@ export default function Signup() {
                     country="in"
                     value={value}
                     onChange={setValue}
+                    enableSearch="true"
+                    disableSearchIcon	= "true"
                   />
                    <label className="form_label">Phone number (Optional)</label>
                   </div>
@@ -372,8 +374,8 @@ export default function Signup() {
                       value="Apple"
                     />
                     <label for="fruit1">
-                     &ensp; I want to receive MCIP news and updates
                     </label>
+                    <span className="check-title">I want to receive MCIP news and updates</span>
                   </div>
 
                   <button className="login_button" type="submit">

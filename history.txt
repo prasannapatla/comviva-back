@@ -1,0 +1,24 @@
+netlify --v
+netlify -v
+code .
+dir
+git remote -v
+git branch
+git checkout master -b
+git checkout -b master 
+git branch
+clear
+netlify deploy
+netlify deploy --prod
+git add .
+git commit -m "2nd route"
+git push
+netlify deploy
+netlify deploy --prod
+git add .
+git commit -m "route"
+git push
+netlify deploy
+netlify deploy --prod
+history
+doskey/history>history.txt

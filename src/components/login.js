@@ -11,7 +11,7 @@ import Googlelogin from 'react-google-login'
 import MicrosoftLogin from "react-microsoft-login";
 import "./password.css";
 import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/style.css";
+// import "react-phone-input-2/lib/style.css";
 import $ from 'jquery';
 import { Link } from 'react-router-dom'
 import ShowyIcon from "@mui/icons-material/Visibility";
@@ -90,8 +90,9 @@ export default function Login() {
                                     <div className="row">
                                         <div className="col-8">
                                             <input type="checkbox" id="fruit1" name="fruit-1" value="Apple" />
-                                            <label for="fruit1">&ensp;Stay signed in for a week</label>
-                                        </div>
+                                            <label for="fruit1">
+                                            </label>
+                                            <span className="check-title">I want to receive MCIP news and updates</span>                                        </div>
                                         <div className="col-4">
                                             <Link to="/forgot" className="forgot_style"><h3 className="forgot">Forgot password</h3></Link>
                                         </div>
@@ -99,8 +100,13 @@ export default function Login() {
                                     <button className="login_button" type="submit"><span className="login_text">Login</span></button>
                                 </div>
                             </form>
-                            <p className="google_outlook">or continue with
-                                <span className="google_style">
+                            <p className="google_outlook">
+                                <div className="row">
+                                    <div className="col-6 social">
+                                        <span className="social-text">or continue with</span>
+                                    </div>
+                                    <div className="col-6 social-icon ">
+                                    <span className="google_style">
                                     <Googlelogin
                                         clientId="89472661149-tonb3lq1gl4frkln7r4h8jthg1el0j1h.apps.googleusercontent.com"
                                         buttonText=""
@@ -109,11 +115,17 @@ export default function Login() {
                                         cookiePolicy={'single_host_origin'}
                                     />
                                 </span>
+                                <span className="microsoftstyle">
                                 <MicrosoftLogin
                                     clientId={'f0a38b12-5b04-48e5-b515-87f2b5c2a0f5'}
                                     authCallback={authHandler}
                                     buttonTheme="light_short"
                                 />
+                                </span>
+                                    </div>
+                                </div>
+                                
+
                             </p>
                         </div>
                     </div>

@@ -125,13 +125,17 @@ text-decoration: none;
      margin-bottom: 20px;
  }  
  .login input:focus {
-  outline: 2px solid orange;
-  border: none;
-  box-shadow: 0px 4px 4px rgba(247, 131, 29, 0.18);
+  background: 
+  linear-gradient(white,white) padding-box, /*this is your grey background*/
+  linear-gradient(to right, #ED1C24, #FAA61A) border-box;
+ color: #313149;
+ padding:10px;
+ border: 2px solid transparent;
+ box-shadow: 0px 4px 4px rgba(247, 131, 29, 0.18); 
 }
 .login input:focus + .form_label
 {
-    background-color:purple;
+    background-color:orange;
     color: red;
 }
 
@@ -153,6 +157,7 @@ line-height: 15px;
 
 
 .login .input_box{
+  outline: none;
 width: 480px;
 height: 50px;
 left: 730px;
@@ -224,11 +229,10 @@ color: #FAA61A;
 }
 
 .login input[type=checkbox] + label {
-    display: block;
+  display: inline-block;
     margin: 0.2em;
     cursor: pointer;
     padding: 0.2em;
-    width: 183px;
 height: 15px;
 left: 764px;
 top: 625px;
@@ -247,6 +251,20 @@ color: #000000;
 
   .login  input[type=checkbox] {
     display: none;
+  }
+  .login .check-title{
+    width: 252px;
+  height: 15px;
+  left: 764px;
+  top: 756px;
+  
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+  color: #000000;
   }
   
   .login  input[type=checkbox] + label:before {
@@ -317,26 +335,35 @@ filter: drop-shadow(10px -16px 44px rgba(0, 0, 0, 0.23));
   }
 
   .login .google_outlook{
-  height: 15px;
-  left: 858px;
-  top: 773px;
 
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
   line-height: 15px;
-  /* identical to box height */
   color: #000000;
-  margin-top: 36px;
+  margin-top: 25px;
   text-align: center;
   }
 
-  .login .google_style{
+  .login .social-text{
+    height: 15px;
+    left: 858px;
+    top: 773px;
+  
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+    color: #000000;
+    margin-top: 36px;
+    text-align: center;
+    }
+  
+
+  /* .login .google_style{
     margin-right: 10px;
     margin-left: 10px;
    
-  }
+  } */
 
   .login .login_text{
     width: 41px;
@@ -456,4 +483,59 @@ color: #A7A9AC;
     z-index: -1;
   }
   
+}
+
+.login .microsoftstyle svg path{
+  display: none;
+}
+
+.login .microsoftstyle svg{
+  background:url('./images/microsoft.png');
+  position:absolute;
+  width:50px;
+  height:50px;
+  background-repeat: no-repeat;
+  background-size: 35px 35px;
+  background-position: center;
+    cursor: pointer;
+    border: 1px solid #A7A9AC;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-top: 11px;
+
+}
+
+.login .google_style svg path{
+  display: none;
+}
+
+.login .google_style button{
+  box-shadow: none !important;
+}
+
+.login .google_style svg{
+  background:url('./images/google.png');
+  position:absolute;
+  width:50px;
+  height:50px;
+  background-repeat: no-repeat;
+  background-size: 35px 35px;
+  background-position: center;
+    cursor: pointer;
+    border: 1px solid #A7A9AC;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.login .google_outlook span{
+  margin-left: 16px;
+}
+
+.login .social{
+  text-align: right;
+    margin-top: 25px;
+}
+.login .social-icon{
+  text-align: left;
+  margin-left: -46px;
 }

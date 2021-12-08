@@ -335,13 +335,19 @@ $(function() {
               </form>
             </div>
           </div>
+          </div>
+          </section>
+          <section>
+            <div className="container">
+
           <div className="row">
           <div className="col-6 footer_padding" style={{"margin-top":"12%"}}>
             <p className="footer_text">A PRODUCT OF</p>
             <img src={comviva_logo} className="footer_logo" alt="logo" />
             </div>
-          </div><br/><br/>
-        </div>
+          </div>
+          </div>
+          <br/><br/>
       </section>
     </div>
   );

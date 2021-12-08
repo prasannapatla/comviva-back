@@ -221,7 +221,7 @@ input[type="text"] {
   color: #000000;
 }
 .signup input[type="checkbox"] + label {
-  display: block;
+  display: inline-block;
   margin: 0.2em;
   cursor: pointer;
   padding: 0.2em;
@@ -257,6 +257,7 @@ input[type="text"] {
   vertical-align: bottom;
   color: transparent;
   transition: 0.2s;
+  padding-top: 1px;
 }
 
 .signup input[type="checkbox"] + label:active:before {
@@ -278,6 +279,21 @@ input[type="text"] {
   transform: scale(1);
   background-color: #bfb;
   border-color: #bfb;
+}
+
+.signup .check-title{
+  width: 252px;
+height: 15px;
+left: 764px;
+top: 756px;
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+color: #000000;
 }
 
 .signup .login_banner_img {
@@ -341,8 +357,17 @@ input[type="text"] {
   bottom: 0;
   padding: 0;
   background-color: transparent !important;
-  border: 1px solid #a7a9ac;
-  border-radius: 22px 0 0 22px !important;
+  border-right: 1px solid #a7a9ac !important;
+  border-left: none !important;
+    border-radius: 22px 0 0 22px !important;
+}
+.react-tel-input .flag-dropdown{
+  /* border:none !important; */
+  border-right: 1px solid #a7a9ac;
+  border-top: none !important;
+  border-left: none !important;
+  border-bottom: none !important;
+
 }
 .signup .react-tel-input {
   font-family: 'Roboto',sans-serif;
@@ -350,6 +375,34 @@ input[type="text"] {
   position: relative;
   width: 113%;
 }
+
+.signup .react-tel-input .country-list .search-box {
+  border: 1px solid #cacaca;
+  border-radius: 3px;
+  font-size: 15px;
+  line-height: 15px;
+  margin-left: -5px;
+  padding: 11px 39px 11px;
+  outline: none;
+border: 1px solid #A7A9AC;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+    background-size: 29px;
+    background-position: 6px 7px;
+    /* position: absolute; */
+    /* margin-top: 27px; */
+    content: '';
+    background-image: url('./images/search.png');
+    background-size: -33px -13px;
+    position: absolute;
+    /* width: 20px; */
+    /* height: 20px; */
+    margin-left: -4px;
+}
+
+
+
 
 /* Password  CSS */
 
@@ -673,6 +726,9 @@ height: 353px;
   color: #ed1c24;
 }
 
+/* .signup .react-tel-input .flag-dropdown:focus +PhoneInput{
+  border: none;
+} */
 
 /* Label color change */
 .input-group {
@@ -682,9 +738,24 @@ height: 353px;
 }
 
 input:focus + label {
-  background: -webkit-linear-gradient(94.64deg, #ED1C24 0%, #FAA61A 100%); 
+  /* background: -webkit-linear-gradient(94.64deg, #ED1C24 0%, #FAA61A 100%); 
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
+  /* background: -webkit-linear-gradient(94.64deg, red , yellow);
+  background: -o-linear-gradient(right, red, yellow);
+  background: -moz-linear-gradient(right, red, yellow);
+  background: linear-gradient(to right, red , yellow); 
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent; */
+
+ background: -webkit-linear-gradient(45deg #ED1C24, #FAA61A);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+
+ /* background: -webkit-linear-gradient(#ED1C24, #FAA61A);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent; */
+
 }
 PhoneInput:focus + label {
   background: -webkit-linear-gradient(94.64deg, #ED1C24 0%, #FAA61A 100%); 
@@ -799,3 +870,4 @@ font-size: 12px;
 line-height: 15px;
 color: #128807;
 }
+
