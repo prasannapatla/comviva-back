@@ -326,15 +326,15 @@ color: #000000;
 
 /* Flag css */
 .signup .react-tel-input .selected-flag .arrow {
-  position: relative;
+  /* position: relative;
   top: 50%;
   margin-top: -2px !important;
   left: 26px !important;
   width: 7px !important;
-  height: 61px !important;
-  border-left: 7px solid transparent !important;
-  border-right: 7px solid transparent !important;
-  border-top: 7px solid #faa61a !important;
+  height: 61px !important; */
+  border-left: 5px solid transparent !important;
+  border-right: 5px solid transparent !important;
+  border-top: 6px solid #faa61a !important;
 }
 .signup .react-tel-input .flag-dropdown.open .selected-flag {
   background: transparent;
@@ -348,7 +348,7 @@ color: #000000;
   position: relative;
   width: 55px !important;
   height: 100%;
-  padding: 0 0 0 4px;
+  padding: 0 0 0 6px;
   border-radius: 3px 0 0 3px;
 }
 .signup .react-tel-input .form-control {
@@ -385,6 +385,13 @@ color: #000000;
   border-left: none !important;
   border-bottom: none !important;
 
+}
+.react-tel-input .selected-flag .flag{
+zoom: 147%;
+}
+.react-tel-input .selected-flag .arrow.up {
+  border-top: none;
+  border-bottom:none !important;
 }
 .signup .react-tel-input {
   font-family: 'Roboto',sans-serif;
@@ -758,6 +765,7 @@ height: 353px;
 
 input:focus + label {
 
+
  background: -webkit-linear-gradient(90deg, #ed1c24 0%, #faa61a 100%);
  -webkit-background-clip: text;
  -webkit-text-fill-color: transparent;
@@ -767,11 +775,7 @@ input:focus + label {
  -webkit-text-fill-color: transparent; */
 
 }
-PhoneInput:focus + label {
-  background: -webkit-linear-gradient(94.64deg, #ED1C24 0%, #FAA61A 100%); 
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+
 
 .input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3), .input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
   border-top-right-radius: 42px;
