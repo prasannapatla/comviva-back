@@ -140,6 +140,20 @@ export default function Signup() {
     });
 });
 
+
+$(function() {
+
+  $(".input_box3").focusin(function() {
+      $(".phone-label-after").css('opacity', '1');
+      $(".phone-label-initial").css('opacity', '0');
+      
+  }).focusout(function () {
+      $(".phone-label-after").css('opacity', '0');
+       $(".phone-label-initial").css('opacity', '1');
+      });
+
+ });
+
   return (
     <div>
       <section className="signup">
@@ -249,9 +263,11 @@ export default function Signup() {
                   </div>
 
                   <div className="input-group">
+                    
                   <PhoneInput
                     type="number"
-                    className="input_box"
+                    className="input_box3"
+                    id="myField"
                     inputStyle={{color:'#000000'}}
                     containerStyle={{}}
                     buttonStyle={{}}
@@ -261,7 +277,9 @@ export default function Signup() {
                     enableSearch="true"
                     disableSearchIcon	= "true"
                   />
-                   <label className="form_label">Phone number (Optional)</label>
+                  <span style={{"display": "flex"}}>
+                   <label className="form_label phone-label-initial">Phone number (Optional)</label>
+                   <label className="form_label phone-label-after">Phone number (Optional)</label></span>
                   </div>
                   {/* <label className="form_label">Phone number (Optional)</label>
                   <PhoneInput

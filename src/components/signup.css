@@ -177,6 +177,20 @@ input[type="text"] {
     line-height: 17px;
 }
 
+.signup .input_box3 {
+  outline: none;
+  width: 480px;
+  height: 50px;
+  left: 730px;
+  top: 436px;
+  background: #ffffff;
+  border-radius: 42px;
+  font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+}
 .signup .login_button {
   width: 480px;
   height: 50px;
@@ -242,7 +256,7 @@ input[type="text"] {
   cursor: pointer;
   padding: 0.2em;
 
-  height: 15px;
+  height: 25px;
   left: 764px;
   top: 625px;
 
@@ -348,7 +362,7 @@ color: #000000;
   position: relative;
   width: 55px !important;
   height: 100%;
-  padding: 0 0 0 6px;
+  padding: 0 0 0 9px;
   border-radius: 3px 0 0 3px;
 }
 .signup .react-tel-input .form-control {
@@ -361,7 +375,7 @@ color: #000000;
   margin-left: 0;
   background: #ffffff;
   border: 1px solid #cacaca;
-  border-radius: 20px !important;
+  border-radius: 35px !important;
   line-height: 25px;
   height: 47px !important;
   width: 88% !important;
@@ -773,7 +787,6 @@ input:focus + label {
  /* background: -webkit-linear-gradient(#ED1C24, #FAA61A);
  -webkit-background-clip: text;
  -webkit-text-fill-color: transparent; */
-
 }
 
 
@@ -885,3 +898,14 @@ line-height: 15px;
 color: #128807;
 }
 
+.phone-label-initial{
+  opacity: 1;
+}
+.phone-label-after{
+  opacity: 0;
+  margin-left: -100%;
+  background: -webkit-linear-gradient(90deg, #ed1c24 0%, #faa61a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
