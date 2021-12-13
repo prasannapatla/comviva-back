@@ -131,6 +131,28 @@ export default function Signup() {
     setShow(!show);
   };
 
+  const focuslabel = (e) =>{
+    let text = document.getElementById('phonelabel');
+    console.log(text)
+    // text.style.color="red"
+    // text.style.background = "linear-gradient(white,white) padding-box, linear-gradient(to right, #ED1C24, #FAA61A) border-box;" ;
+    document.getElementById("phonelabel").style.background = 'linear-gradient(#ED1C24, #FAA61A  )'
+    text.style.webkitBackgroundClip = 'text';  
+    text.style.webkitTextFillColor = 'transparent';
+  }
+
+  const blurlabel = (e) =>{
+    let text = document.getElementById('phonelabel');
+    document.getElementById("phonelabel").style.background = '#A7A9AC'
+    text.style.webkitBackgroundClip = 'text';  
+    text.style.webkitTextFillColor = 'transparent';
+    text.style.fontWeight="600"
+    text.style.fontFamily ="Montserrat"
+    text.style.fontStyle="normal"
+
+  }
+
+
   $(function() {
 
     $(".input_box2").focusin(function() {
@@ -275,11 +297,16 @@ $(function() {
                     value={value}
                     onChange={setValue}
                     enableSearch="true"
+                    onFocus={focuslabel}
+                    onBlur ={blurlabel}
                     disableSearchIcon	= "true"
                   />
-                  <span style={{"display": "flex"}}>
+                  <label  id="phonelabel" className="form_label">Phone number (Optional)</label>
+
+                  {/* <span style={{"display": "flex"}}>
                    <label className="form_label phone-label-initial">Phone number (Optional)</label>
-                   <label className="form_label phone-label-after">Phone number (Optional)</label></span>
+                   <label className="form_label phone-label-after">Phone number (Optional)</label>
+                   </span> */}
                   </div>
                   {/* <label className="form_label">Phone number (Optional)</label>
                   <PhoneInput
