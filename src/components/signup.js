@@ -146,7 +146,7 @@ export default function Signup() {
     document.getElementById("phonelabel").style.background = '#A7A9AC'
     text.style.webkitBackgroundClip = 'text';  
     text.style.webkitTextFillColor = 'transparent';
-    text.style.fontWeight="600"
+    text.style.fontWeight="500"
     text.style.fontFamily ="Montserrat"
     text.style.fontStyle="normal"
 
