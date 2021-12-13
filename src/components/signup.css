@@ -727,15 +727,21 @@ height: 353px;
   position: static;
 }
 .signup .carousel-background::after {
-  content: "";
-  position: absolute;
+   content: "";
+/*  position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
   width: 45.33%;
   height: 100%;
-  background: #FFFDF9;
+  background: #FFFDF9; */
   z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #FFFDF9; 
 }
 .signup .slider_button {
   text-align: center;
