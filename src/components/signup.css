@@ -69,7 +69,7 @@ font-style: normal;
 .signup .login_logo {
   width: 186px;
   height: 37px;
-  margin-top: 45px;   
+  margin-top: 55px;   
 }
 
 .signup .welcom_text {
@@ -360,9 +360,9 @@ color: #000000;
   background: transparent;
   outline: none;
   position: relative;
-  width: 55px !important;
+  width: 64px !important;
   height: 100%;
-  padding: 0 0 0 9px;
+  padding: 0 0 0 14px;
   border-radius: 3px 0 0 3px;
 }
 .signup .react-tel-input .form-control {
@@ -441,6 +441,9 @@ border: 1px solid #A7A9AC;
 
 .flag-dropdown ul li:nth-child(2){
   margin-top: 12%;
+}
+.react-tel-input .country-list{
+  padding-left: 12px !important;
 }
 
 

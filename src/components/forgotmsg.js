@@ -18,7 +18,7 @@ export default function Forgotmsg() {
                 <div className="container">
                     <div className="row forgot-padding">
                     <div className="col-lg-6 col-sm-12 banner-img">
-                            <img src={banner_img} className="login_banner_img" alt="login banner image" />
+                            {/* <img src={banner_img} className="login_banner_img" alt="login banner image" /> */}
                     </div>
                         <div className="col-6 login_main">
                             <div className="">

@@ -6,6 +6,7 @@ import banner from '../components/images/banner.png'
 import vector from '../components/images/Vector.png'
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import login from "./images/login.png"
 import './login.css'
 import Googlelogin from 'react-google-login'
 import MicrosoftLogin from "react-microsoft-login";
@@ -48,7 +49,7 @@ export default function Login() {
                     <div className="row">
                         <div className="col-lg-6 col-sm-12 banner-img">
                             {/* <img src={vector} className="" alt="login banner image" /> */}
-                            <img src={banner} className="login_banner_img" alt="login banner image" />
+                            {/* <img src={login} className="login_banner_img" alt="login banner image" /> */}
                         </div>
                         <div className="col-lg-6 col-sm-12 login_main">
                          <a class="go_back" href="#"><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp; Go back</a>
@@ -141,6 +142,9 @@ export default function Login() {
                    <div className="col-6 footer_padding" style={{"margin-top":"12%"}}>
                     <p className="footer_text">A PRODUCT OF</p>
                     <img src={comviva_logo} className="footer_logo" alt="logo" />
+                  </div>
+                  <div className="col-6 footer_links" style={{"margin-top":"12%"}}>
+                            <a href="#">MCIP</a> | <a href="#">Privacy Policy</a> | <a href="#">Terms and conditions</a>
                   </div>
                  </div>
                 </div>

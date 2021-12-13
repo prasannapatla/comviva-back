@@ -20,7 +20,7 @@ export default function Forgotpassword() {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6 col-sm-12 banner-img">
-                            <img src={banner_img} className="login_banner_img" alt="login banner image" />
+                            {/* <img src={banner_img} className="login_banner_img" alt="login banner image" /> */}
                         </div>
                         <div className="col-lg-6 col-sm-12 login_main">
                             <div className="">
@@ -50,7 +50,7 @@ export default function Forgotpassword() {
                 <section>
                   <div className="container">
                    <div className="row">
-                   <div className="col-6 footer_padding" style={{"margin-top":"12%"}}>
+                   <div className="col-6 footer_padding" style={{"margin-top":"19%"}}>
                     <p className="footer_text">A PRODUCT OF</p>
                     <img src={comviva_logo} className="footer_logo" alt="logo" />
                   </div>

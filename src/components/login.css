@@ -17,7 +17,7 @@ body{
   min-height: 82vh;
 }
 .login .login_main{
-  margin-top: 20px;
+  margin-top: 58px;
 }
 .login .go_back{
   text-decoration: none;
@@ -336,7 +336,21 @@ filter: drop-shadow(10px -16px 44px rgba(0, 0, 0, 0.23));
     text-align: center;
     position: static;
   }
-  .login .banner-img::after {
+
+  .login .banner-img::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 45.33%;
+    height: 100%;
+   
+    background: url('./images/login.png') no-repeat;
+    background-size: 629px 679px;
+
+  }
+  /* .login .banner-img::after {
     content: "";
     position: absolute;
     left: 0;
@@ -348,7 +362,7 @@ filter: drop-shadow(10px -16px 44px rgba(0, 0, 0, 0.23));
     background: url('./images/Vector.png') no-repeat;
     background-size: 342px 458px;
     z-index: -1;
-  }
+  } */
 
   .login .google_outlook{
 
@@ -399,13 +413,13 @@ text-align: center;
 color: #FFFFFF;
   }
 
-  .login .footer_links{
+ .footer_links{
     margin-top:40px;
    text-align: right;
   
 
   }
-  .login .footer_links a{
+ .footer_links a{
     width: 249px;
     height: 15px;
     text-decoration: none;
@@ -457,7 +471,7 @@ color: #A7A9AC;
     margin-left: -35%;
     padding-top: 181px;
   }
-  .login .banner-img::after {
+  /* .login .banner-img::after {
     content: "";
     position: absolute;
     left: 0;
@@ -469,7 +483,7 @@ color: #A7A9AC;
     background: url('./images/Vector.png') no-repeat;
     background-size: 428px 611px;
     z-index: -1;
-  }
+  } */
   
 }
 
@@ -486,7 +500,7 @@ color: #A7A9AC;
     margin-left: -33%;
     padding-top: 185px;
   }
-  .login .banner-img::after {
+  /* .login .banner-img::after {
     content: "";
     position: absolute;
     left: 0;
@@ -498,7 +512,7 @@ color: #A7A9AC;
     background: url('./images/Vector.png') no-repeat;
     background-size: 428px 611px;
     z-index: -1;
-  }
+  } */
   
 }
 

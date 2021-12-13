@@ -24,7 +24,7 @@ body{
 .forgotmsg .login_logo{
   width: 186px;
   height: 37px; 
-  margin-top: 19%;
+  margin-top: 5%;
 }
  
 .forgotmsg .welcom_text{
@@ -87,10 +87,19 @@ body{
     width: 45.33%;
     height: 100%;
    
-    background: url('./images/Vector.png') no-repeat;
-    background-size: 342px 458px;
+    background: url('./images/forgot.png') no-repeat;
+    background-size: 540px 665px;
     z-index: -1;
   }
+  @media screen and (min-width:1337px){
+ .forgotmsg .login_main{
+      position: relative;
+  top: 50%;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+  }
+}
 /* @media screen and (max-width: 1920px) and (min-width: 1660px){
 
   .forgotmsg .login_banner_img{
