@@ -161,6 +161,44 @@ $(document).ready(function () {
     }
     };
 
+    const focusPassword = (e) =>{
+      let text = document.getElementById('password');
+      console.log(text)
+      document.getElementById("password").style.background = 'linear-gradient(#ED1C24, #FAA61A  )'
+      text.style.webkitBackgroundClip = 'text';  
+      text.style.webkitTextFillColor = 'transparent';
+      text.style.fontWeight="bold"
+    }
+  
+    const blurPassword = (e) =>{
+      let text = document.getElementById('password');
+      document.getElementById("password").style.background = '#A7A9AC'
+      text.style.webkitBackgroundClip = 'text';  
+      text.style.webkitTextFillColor = 'transparent';
+      text.style.fontWeight="600"
+      text.style.fontFamily ="Montserrat"
+      text.style.fontStyle="normal"
+  
+    }
+    const focusconfirmPassword = (e) =>{
+      let text = document.getElementById('cpassword');
+      console.log(text)
+      document.getElementById("cpassword").style.background = 'linear-gradient(#ED1C24, #FAA61A  )'
+      text.style.webkitBackgroundClip = 'text';  
+      text.style.webkitTextFillColor = 'transparent';
+      text.style.fontWeight="bold"
+    }
+  
+    const blurconfirmPassword = (e) =>{
+      let text = document.getElementById('cpassword');
+      document.getElementById("cpassword").style.background = '#A7A9AC'
+      text.style.webkitBackgroundClip = 'text';  
+      text.style.webkitTextFillColor = 'transparent';
+      text.style.fontWeight="600"
+      text.style.fontFamily ="Montserrat"
+      text.style.fontStyle="normal"
+  
+    }
 
 
   $(function() {
@@ -212,9 +250,11 @@ $(function() {
                       onChange={handleInputChange}
                       id="exampleInputEmail1"
                       aria-describedby="emailHelp"
+                      onFocus={focusPassword}
+                      onBlur ={blurPassword }
                       required
                     />
-                    <label className="form_label" id="email">
+                    <label className="form_label" id="password">
                       Create Password
                     </label>
                   </div>
@@ -303,11 +343,14 @@ $(function() {
                       id="confirmpassword"
                       className="input_box2"
                       name="confirm"
+                      onFocus={focusconfirmPassword}
+                      onBlur ={blurconfirmPassword }
                       required
                     />
-                    <label className="form_label" id="email">
+                    <label className="form_label" id="cpassword">
                       Re-enter your new password
                     </label>
+
                   </div>
                   <div className="password_match" id="match">
                     <p id="">

@@ -42,6 +42,46 @@ export default function Login() {
         setLabel("orange")
     }
 
+    const focusemail = (e) =>{
+        let text = document.getElementById('emaillabel');
+        console.log(text)
+        document.getElementById("emaillabel").style.background = 'linear-gradient(#ED1C24, #FAA61A  )'
+        text.style.webkitBackgroundClip = 'text';  
+        text.style.webkitTextFillColor = 'transparent';
+        text.style.fontWeight="bold"
+      }
+    
+      const bluremail = (e) =>{
+        let text = document.getElementById('emaillabel');
+        document.getElementById("emaillabel").style.background = '#A7A9AC'
+        text.style.webkitBackgroundClip = 'text';  
+        text.style.webkitTextFillColor = 'transparent';
+        text.style.fontWeight="600"
+        text.style.fontFamily ="Montserrat"
+        text.style.fontStyle="normal"
+    
+      }
+    
+      const focusPassword = (e) =>{
+        let text = document.getElementById('password');
+        console.log(text)
+        document.getElementById("password").style.background = 'linear-gradient(#ED1C24, #FAA61A  )'
+        text.style.webkitBackgroundClip = 'text';  
+        text.style.webkitTextFillColor = 'transparent';
+        text.style.fontWeight="bold"
+      }
+    
+      const blurPassword = (e) =>{
+        let text = document.getElementById('password');
+        document.getElementById("password").style.background = '#A7A9AC'
+        text.style.webkitBackgroundClip = 'text';  
+        text.style.webkitTextFillColor = 'transparent';
+        text.style.fontWeight="600"
+        text.style.fontFamily ="Montserrat"
+        text.style.fontStyle="normal"
+    
+      }
+      
     return (
         <div>
             <section className="login">
@@ -68,13 +108,17 @@ export default function Login() {
                             <form>
                                 <div className="">
                                     <div className="input-group">
-                                    <input type="email" className="input_box" name="email" required />
-                                    <label className="form_label" id="email">Email</label>
+                                    <input type="email" className="input_box" name="email" 
+                                    onFocus={focusemail} onBlur ={ bluremail } required 
+                                    />
+                                    <label className="form_label" id="emaillabel">Email</label>
                                     </div>
                                     <div className="input-group">                                  
                                    <input type={show ? "text" : "password"} id="exampleInputEmail1" aria-describedby="emailHelp" className="input_box" name="password" required
+                                   onFocus={focusPassword}
+                                   onBlur ={blurPassword }
                                     /> 
-                                    <label className="form_label">Password  </label>
+                                    <label className="form_label" id="password">Password  </label>
                                     </div>
                                     <span className="Icontoggle">
                                     {show ? (

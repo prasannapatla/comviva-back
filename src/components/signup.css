@@ -115,7 +115,7 @@ input[type="text"] {
 }
 .signup input:focus {
   background: 
-  linear-gradient(white,white) padding-box, /*this is your grey background*/
+  linear-gradient(white,white) padding-box, 
   linear-gradient(to right, #ED1C24, #FAA61A) border-box;
  color: #313149;
  padding:10px;
@@ -146,6 +146,7 @@ input[type="text"] {
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
+  color: #A7A9AC;
 }
 
 .signup .input_box {
@@ -664,6 +665,13 @@ color: #A7A9AC;
  
 
 /* Slider css */
+#carouselExampleIndicators{
+  -webkit-transition: 0.1s ease-in-out left;
+    -moz-transition: 0.1s ease-in-out left;
+    -o-transition: 0.1s ease-in-out left;
+    transition: 0.1s ease-in-out left;
+}
+
 .signup .carousel-inner {
   text-align: center;
 }
@@ -791,15 +799,13 @@ height: 353px;
   -webkit-text-fill-color: transparent;
 }
 
-input:focus + label {
+/* input:focus + label {
+ background:  linear-gradient(#ED1C24, #FAA61A  );
  background: -webkit-linear-gradient(90deg, #ed1c24 0%, #faa61a 100%);
  -webkit-background-clip: text;
  -webkit-text-fill-color: transparent;
 
- /* background: -webkit-linear-gradient(#ED1C24, #FAA61A);
- -webkit-background-clip: text;
- -webkit-text-fill-color: transparent; */
-}
+} */
 
 
 .input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3), .input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {

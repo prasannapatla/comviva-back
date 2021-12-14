@@ -11,6 +11,25 @@ import './forgot_password.css'
 
 export default function Forgotpassword() {
 
+    const focusemail = (e) =>{
+        let text = document.getElementById('emaillabel');
+        console.log(text)
+        document.getElementById("emaillabel").style.background = 'linear-gradient(#ED1C24, #FAA61A  )'
+        text.style.webkitBackgroundClip = 'text';  
+        text.style.webkitTextFillColor = 'transparent';
+        text.style.fontWeight="bold"
+      }
+    
+      const bluremail = (e) =>{
+        let text = document.getElementById('emaillabel');
+        document.getElementById("emaillabel").style.background = '#A7A9AC'
+        text.style.webkitBackgroundClip = 'text';  
+        text.style.webkitTextFillColor = 'transparent';
+        text.style.fontWeight="600"
+        text.style.fontFamily ="Montserrat"
+        text.style.fontStyle="normal"
+      }
+
 
 
     return (
@@ -35,8 +54,10 @@ export default function Forgotpassword() {
                             <form>
                                 <div className="">
                                 <div className="input-group">
-                                    <input type="email" className="input_box" placeholder="Enter Email" name="email" required />
-                                    <label className="form_label" id="email">Email</label>
+                                    <input type="email" className="input_box" placeholder="" name="email" 
+                                    onFocus={focusemail} onBlur ={ bluremail } required  
+                                    />
+                                    <label className="form_label" id="emaillabel">Email</label>
                                     </div>
                                     <button className="login_button" type="submit"><span className="login_text">Send me a recovery email</span></button>
 

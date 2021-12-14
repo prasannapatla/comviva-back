@@ -134,11 +134,10 @@ export default function Signup() {
   const focuslabel = (e) =>{
     let text = document.getElementById('phonelabel');
     console.log(text)
-    // text.style.color="red"
-    // text.style.background = "linear-gradient(white,white) padding-box, linear-gradient(to right, #ED1C24, #FAA61A) border-box;" ;
     document.getElementById("phonelabel").style.background = 'linear-gradient(#ED1C24, #FAA61A  )'
     text.style.webkitBackgroundClip = 'text';  
     text.style.webkitTextFillColor = 'transparent';
+    text.style.fontWeight="bold"
   }
 
   const blurlabel = (e) =>{
@@ -152,7 +151,90 @@ export default function Signup() {
 
   }
 
+  
+  const focusName = (e) =>{
+    let text = document.getElementById('name');
+    console.log(text)
+    document.getElementById("name").style.background = 'linear-gradient(#ED1C24, #FAA61A  )'
+    text.style.webkitBackgroundClip = 'text';  
+    text.style.webkitTextFillColor = 'transparent';
+    text.style.fontWeight="bold"
+  }
 
+  const blurName = (e) =>{
+    let text = document.getElementById('name');
+    document.getElementById("name").style.background = '#A7A9AC'
+    text.style.webkitBackgroundClip = 'text';  
+    text.style.webkitTextFillColor = 'transparent';
+    text.style.fontWeight="600"
+    text.style.fontFamily ="Montserrat"
+    text.style.fontStyle="normal"
+
+  }
+
+  const focusemail = (e) =>{
+    let text = document.getElementById('emaillabel');
+    console.log(text)
+    document.getElementById("emaillabel").style.background = 'linear-gradient(#ED1C24, #FAA61A  )'
+    text.style.webkitBackgroundClip = 'text';  
+    text.style.webkitTextFillColor = 'transparent';
+    text.style.fontWeight="bold"
+  }
+
+  const bluremail = (e) =>{
+    let text = document.getElementById('emaillabel');
+    document.getElementById("emaillabel").style.background = '#A7A9AC'
+    text.style.webkitBackgroundClip = 'text';  
+    text.style.webkitTextFillColor = 'transparent';
+    text.style.fontWeight="600"
+    text.style.fontFamily ="Montserrat"
+    text.style.fontStyle="normal"
+
+  }
+
+  
+  const focusPassword = (e) =>{
+    let text = document.getElementById('password');
+    console.log(text)
+    document.getElementById("password").style.background = 'linear-gradient(#ED1C24, #FAA61A  )'
+    text.style.webkitBackgroundClip = 'text';  
+    text.style.webkitTextFillColor = 'transparent';
+    text.style.fontWeight="bold"
+  }
+
+  const blurPassword = (e) =>{
+    let text = document.getElementById('password');
+    document.getElementById("password").style.background = '#A7A9AC'
+    text.style.webkitBackgroundClip = 'text';  
+    text.style.webkitTextFillColor = 'transparent';
+    text.style.fontWeight="600"
+    text.style.fontFamily ="Montserrat"
+    text.style.fontStyle="normal"
+
+  }
+
+  
+  const focusCompany = (e) =>{
+    let text = document.getElementById('company');
+    console.log(text)
+    document.getElementById("company").style.background = 'linear-gradient(#ED1C24, #FAA61A )'
+    text.style.webkitBackgroundClip = 'text';  
+    text.style.webkitTextFillColor = 'transparent';
+    text.style.fontWeight="bold"
+  }
+
+  const blurCompany = (e) =>{
+    let text = document.getElementById('company');
+    document.getElementById("company").style.background = '#A7A9AC'
+    text.style.webkitBackgroundClip = 'text';  
+    text.style.webkitTextFillColor = 'transparent';
+    text.style.fontWeight="600"
+    text.style.fontFamily ="Montserrat"
+    text.style.fontStyle="normal"
+
+  }
+
+  
   $(function() {
 
     $(".input_box2").focusin(function() {
@@ -186,7 +268,7 @@ $(function() {
                 id="carouselExampleIndicators"
                 class="carousel slide"
                 data-ride="carousel"
-                data-interval = "2000"
+                // data-interval = "2000"
               >
                 <ol class="carousel-indicators">
                   <li
@@ -263,8 +345,10 @@ $(function() {
                     className="input_box"
                     name="email"
                     required
+                    onFocus={focusemail}
+                    onBlur ={ bluremail }
                   />
-                   <label className="form_label" id="email">Email</label>
+                   <label className="form_label" id="emaillabel">Email</label>
                   </div>
                   <div className="input-group">
                   <input
@@ -272,16 +356,20 @@ $(function() {
                     className="input_box"
                     name="email"
                     required
+                    onFocus={focusName}
+                    onBlur ={blurName}
                   />
-                   <label className="form_label" id="email">Full Name</label>
+                   <label className="form_label" id="name">Full Name</label>
                   </div>
                   <div className="input-group">
                   <input
                     type="text"
                     className="input_box"
                     name="email"
+                    onFocus={focusCompany}
+                    onBlur ={blurCompany}
                   />
-                   <label className="form_label" id="email">Company Name(Optional)</label>
+                   <label className="form_label" id="company">Company Name(Optional)</label>
                   </div>
 
                   <div className="input-group">
@@ -300,6 +388,7 @@ $(function() {
                     onFocus={focuslabel}
                     onBlur ={blurlabel}
                     disableSearchIcon	= "true"
+                    countryCodeEditable	="false"
                   />
                   <label  id="phonelabel" className="form_label">Phone number (Optional)</label>
 
@@ -327,9 +416,11 @@ $(function() {
                     onChange={handleInputChange}
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
+                    onFocus={focusPassword}
+                    onBlur ={blurPassword}
                     required
                   />
-                  <label className="form_label">Create Password</label>
+                  <label className="form_label" id="password">Create Password</label>
                   </div>
                   <span className="Icontoggle">
                     {show ? (
