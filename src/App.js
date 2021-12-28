@@ -20,7 +20,7 @@ function App() {
       <Route path="/login" element={<Login />}/>    
       <Route path="/signup" element={<Signup/>} />
       <Route exact path="/forgot" element={<Forgot/>} />
-      <Route exact path="/reset" element={<Reset/>} />
+      <Route exact path="/reset/:token" element={<Reset/>} />
       <Route exact path="/forgotmsg" element={<Forgotmsg/>} />
       <Route exact path="/resetmsg" element={<Resetmsg/>} />  
       <Route exact path="/email" element={<Emailtemp/>} />  

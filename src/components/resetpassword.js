@@ -9,6 +9,8 @@ import { Component, useState } from "react";
 import "./resetpassword.css";
 import ShowyIcon from "@mui/icons-material/Visibility";
 import HideIcon from "@mui/icons-material/VisibilityOff";
+import { Link, useHistory, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   faEye,
   faTimes,
@@ -115,6 +117,7 @@ $(document).ready(function () {
   
     };
 
+  
     const handleInputChange = (e) => {
       var password = e.target.value;
       if (password.match(/[A-Z]/) != null) {
@@ -219,66 +222,90 @@ $(function() {
   });
 });
 
+ const navigate = useNavigate();
 
+ const [password, setPassword] = useState("");
+ const { token } = useParams();
+ console.log("token is", token);
 
+const passwordChange = e => {
+   setPassword(e.target.value)
+}
+  
+const twocalls = (e) => {
+  handleInputChange(e)
+  passwordChange(e)
+}
+  
+const PostData = () => {
+   fetch("http://localhost:3001/api/auth/new-password", {
+     method: "post",
+     headers: {
+       "Content-Type": "application/json",
+     },
+     body: JSON.stringify({
+       password,
+       token,
+     }),
+   })
+     .then((res) => res.json())
+     .then((data) => {
+       if (data.error) {
+         //   M.toast({html: data.error,classes:"#c62828 red darken-3"})
+         alert(data.error);
+       } else {
+         //    M.toast({html:data.message,classes:"#43a047 green darken-1"})
+        //  alert(data.message);
+         navigate('/resetmsg');
+       }
+     })
+     .catch((err) => {
+       console.log(err);
+     });
+ };
+ 
   return (
     <div>
       <section className="resetpassword">
         <div className="container">
           <div className="row">
             <div className="col-lg-6 col-sm-12 banner-img">
-            {/* <img src={banner_img} className="login_banner_img" alt="login banner image" /> */}
+              {/* <img src={banner_img} className="login_banner_img" alt="login banner image" /> */}
             </div>
             {/* <div className="col-lg-1"></div> */}
             <div className="col-lg-6 col-sm-12 login_main">
               <div className="">
                 <div className="row">
                   <div className="col-6">
-                  <img src={logo} className="login_logo" alt="logo" />
+                    <img src={logo} className="login_logo" alt="logo" />
                   </div>
                 </div>
               </div>
-              <h4 className="welcom_text" style={{"margin-top":"7%"}}>Reset password</h4>
-              <form >
+              <h4 className="welcom_text" style={{ "margin-top": "7%" }}>
+                Reset password
+              </h4>
+              {/* <form> */}
                 <div className="">
                   <div className="input-group">
                     <input
                       type={show ? "text" : "password"}
                       id="password"
                       name="password"
-                      className="input_box"
-                      onChange={handleInputChange}
+                    className="input_box"
+                    onChange={twocalls}
+                      // onChange={handleInputChange}
+                      // onChange={(e) => setPassword(e.target.value)}
                       id="exampleInputEmail1"
                       aria-describedby="emailHelp"
                       onFocus={focusPassword}
-                      onBlur ={blurPassword }
+                      onBlur={blurPassword}
                       required
                     />
                     <label className="form_label" id="password">
                       Create Password
                     </label>
                   </div>
-                  {/* <span className="Icontoggle">
-                    {show ? (
-                      <faFontAwesomeIcon
-                        icon={faEyeSlash}
-                        className="fas fa-eye-slash"
-                        id="show_hide"
-                        onClick={handleShowHide}
-                      >
-                         Hide Password
-                      </faFontAwesomeIcon>
-                    ) : (
-                      <faFontAwesomeIcon
-                        icon={faEye}
-                        className="fas fa-eye"
-                        id="show_hide"
-                        onClick={handleShowHide}
-                      >
-                        Show Password
-                      </faFontAwesomeIcon>
-                    )}
-                  </span> */}
+                 
                   <div class="password_validation" id="validate">
                     <p id="capital">
                       <faFontAwesomeIcon
@@ -290,9 +317,8 @@ $(function() {
                         className="fas fa-times icon"
                       />
                       <span className="valid-text">1 uppercase character</span>
-                      
                     </p>
-                    <p id="character" style={{"margin-top":"-11px"}}>
+                    <p id="character" style={{ "margin-top": "-11px" }}>
                       <faFontAwesomeIcon
                         icon={faTimes}
                         className="fas fa-check icon"
@@ -301,9 +327,9 @@ $(function() {
                         icon={faCheck}
                         className="fas fa-times icon"
                       />
-                      <span className="valid-text">1 special character</span>              
+                      <span className="valid-text">1 special character</span>
                     </p>
-                    <p id="number" style={{"margin-top":"-11px"}}>
+                    <p id="number" style={{ "margin-top": "-11px" }}>
                       <faFontAwesomeIcon
                         icon={faTimes}
                         className="fas fa-check icon"
@@ -314,7 +340,7 @@ $(function() {
                       />
                       <span className="valid-text">1 number</span>
                     </p>
-                    <p id="count" style={{"margin-top":"-11px"}}>
+                    <p id="count" style={{ "margin-top": "-11px" }}>
                       <faFontAwesomeIcon
                         icon={faTimes}
                         className="fas fa-check icon"
@@ -332,25 +358,25 @@ $(function() {
                         icon={faTimes}
                         className="fas fa-check icon"
                       />
-                      <span className="sucess-text">Your password is secure and you’re  all set!</span>
-                      
+                      <span className="sucess-text">
+                        Your password is secure and you’re all set!
+                      </span>
                     </p>
                   </div>
-                  <div className="input-group" style={{"margin-top":"-5%"}}>
+                  <div className="input-group" style={{ "margin-top": "-5%" }}>
                     <input
-                    onChange={handleInputChange}
+                      onChange={handleInputChange}
                       type="password"
                       id="confirmpassword"
                       className="input_box2"
                       name="confirm"
                       onFocus={focusconfirmPassword}
-                      onBlur ={blurconfirmPassword }
+                      onBlur={blurconfirmPassword}
                       required
                     />
                     <label className="form_label" id="cpassword">
                       Re-enter your new password
                     </label>
-
                   </div>
                   <div className="password_match" id="match">
                     <p id="">
@@ -359,7 +385,6 @@ $(function() {
                         className="fas fa-check icon"
                       />
                       <span className="match-text">Passwords matched!</span>
-                      
                     </p>
                   </div>
                   <div className="password_notmatch" id="notMatch">
@@ -368,31 +393,40 @@ $(function() {
                         icon={faTimes}
                         className="fas fa-times icon"
                       />
-                      <span className="notmatch-text">Passwords don’t match!</span>
-                      
+                      <span className="notmatch-text">
+                        Passwords don’t match!
+                      </span>
                     </p>
                   </div>
 
-                  <button className="login_button" type="submit">
+                  <button
+                    className="login_button"
+                    type="submit"
+                    onClick={() => PostData()}
+                  >
                     <span className="login_text">Reset password</span>
                   </button>
                 </div>
-              </form>
+              {/* </form> */}
             </div>
           </div>
-          </div>
-          </section>
-          
-          <section>
-            <div className="container">
+        </div>
+      </section>
+
+      <section>
+        <div className="container">
           <div className="row">
-          <div className="col-6 footer_padding" style={{"margin-top":"18%"}}>
-            <p className="footer_text">A PRODUCT OF</p>
-            <img src={comviva_logo} className="footer_logo" alt="logo" />
+            <div
+              className="col-6 footer_padding"
+              style={{ "margin-top": "18%" }}
+            >
+              <p className="footer_text">A PRODUCT OF</p>
+              <img src={comviva_logo} className="footer_logo" alt="logo" />
             </div>
           </div>
-          </div>
-          <br/><br/>
+        </div>
+        <br />
+        <br />
       </section>
     </div>
   );
